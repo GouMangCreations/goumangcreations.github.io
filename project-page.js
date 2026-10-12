@@ -1,3 +1,8 @@
+const presentationStyles = document.createElement('link');
+presentationStyles.rel = 'stylesheet';
+presentationStyles.href = '../image-presentation.css';
+document.head.append(presentationStyles);
+
 const slug = document.body.dataset.project;
 const project = projects.find(item => item.slug === slug);
 
