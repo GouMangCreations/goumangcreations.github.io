@@ -11,12 +11,14 @@ function renderProjects(filter = 'all') {
   });
 }
 
-renderProjects();
-document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
-  document.querySelector('.filter.active').classList.remove('active');
-  button.classList.add('active');
-  renderProjects(button.dataset.filter);
-}));
+if (grid) {
+  renderProjects();
+  document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
+    document.querySelector('.filter.active').classList.remove('active');
+    button.classList.add('active');
+    renderProjects(button.dataset.filter);
+  }));
+}
 
 const heroSlides = projects.map(project => ({ image: project.images[0], title: project.title }));
 const heroImage = document.querySelector('#hero-slide');

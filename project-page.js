@@ -12,12 +12,12 @@ if (!project) {
   const aboutLink = document.querySelector('.site-header nav a[href="../index.html#about"]');
   if (aboutLink) aboutLink.href = '../about.html';
   document.title = `${project.title} | GouMang Creations`;
+  const titleSizeClass = project.title.length > 24 ? ' project-title-long' : '';
   document.querySelector('#project-detail').innerHTML = `
-    <section class="project-intro">
+    <section class="project-intro${titleSizeClass}">
       <p class="eyebrow">${project.label}</p>
       <h1>${project.title}</h1>
       <p class="project-materials">${project.materials}</p>
-      <p class="project-description">${project.description}</p>
     </section>
     <section class="project-carousel" aria-label="${project.title} photo gallery">
       <div class="project-stage">
@@ -25,14 +25,16 @@ if (!project) {
         <button class="project-arrow previous" type="button" aria-label="Previous image">←</button>
         <button class="project-arrow next" type="button" aria-label="Next image">→</button>
       </div>
-      <div class="project-gallery-meta"><p id="project-caption">${project.captions[0]}</p><p id="project-count" aria-live="polite">01 / ${String(project.images.length).padStart(2, '0')}</p></div>
+      <div class="project-gallery-meta"><p>${project.title}</p><p id="project-count" aria-live="polite">01 / ${String(project.images.length).padStart(2, '0')}</p></div>
       <div class="project-thumbnails" role="tablist" aria-label="Choose a project image">${project.images.map((image, index) => `<button class="project-thumb${index === 0 ? ' active' : ''}" type="button" data-index="${index}" role="tab" aria-selected="${index === 0}"><img src="../${image}" alt="View image ${index + 1}"></button>`).join('')}</div>
+    </section>
+    <section class="project-caption">
+      <p class="project-description">${project.description}</p>
     </section>
     <a class="back-work" href="../index.html#work">← Back to selected work</a>`;
 
   let currentImage = 0;
   const image = document.querySelector('#project-image');
-  const caption = document.querySelector('#project-caption');
   const count = document.querySelector('#project-count');
   const thumbs = [...document.querySelectorAll('.project-thumb')];
   function showImage(index) {
@@ -41,7 +43,6 @@ if (!project) {
     window.setTimeout(() => {
       image.src = `../${project.images[currentImage]}`;
       image.alt = project.captions[currentImage];
-      caption.textContent = project.captions[currentImage];
       count.textContent = `${String(currentImage + 1).padStart(2, '0')} / ${String(project.images.length).padStart(2, '0')}`;
       thumbs.forEach((thumb, thumbIndex) => { thumb.classList.toggle('active', thumbIndex === currentImage); thumb.setAttribute('aria-selected', thumbIndex === currentImage); });
       image.style.opacity = '1';
