@@ -97,8 +97,8 @@ const projects = [
   },
   {
     slug: 'kachina-tree-end-table', title: '“Kachina Tree” End Table', category: 'furniture', label: 'Furniture', materials: 'Oak, India ink & hard wax oil',
-    images: ['images/kachina-tree-end-table1.jpeg', 'images/kachina-tree-end-table2.jpeg', 'images/kachina-tree-end-table3.jpeg', 'images/hoodoos.jpeg'],
+    images: ['images/kachina-tree-end-table1.jpeg', 'images/kachina-tree-end-table2.jpeg', 'images/kachina-tree-end-table3.jpeg', 'images/hoodoos.JPG'],
     description: 'Inspired by Sedona’s lesser-known Kachina Tree Cave, where a certain angle reveals a tree framed inside a cave. The legs invite the same search for perspective at home, while complementary curves in the top and base echo the way the tree and cave complete one another.',
-    captions: ['“Kachina Tree” end table, viewed through its sculptural legs.', 'Complementary curves connect the top and base.', 'A different angle reveals a new composition.', 'The Sedona landscape that started the idea.']
+    captions: ['“Kachina Tree” end table, viewed through its sculptural legs.', 'Complementary curves connect the top and base.', 'A different angle reveals a new composition.', 'A desert landscape that helped start the idea.']
   }
 ];
