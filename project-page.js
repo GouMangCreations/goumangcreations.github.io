@@ -6,6 +6,16 @@ document.head.append(presentationStyles);
 const slug = document.body.dataset.project;
 const project = projects.find(item => item.slug === slug);
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[character]);
+}
+
 if (!project) {
   window.location.replace('../index.html#work');
 } else {
@@ -13,6 +23,11 @@ if (!project) {
   if (aboutLink) aboutLink.href = '../about.html';
   document.title = `${project.title} | GouMang Creations`;
   const titleSizeClass = project.title.length > 24 ? ' project-title-long' : '';
+  const descriptionParagraphs = project.description
+    .split(/\r?\n\s*\r?\n/)
+    .filter(paragraph => paragraph.trim())
+    .map(paragraph => `<p class="project-description">${escapeHtml(paragraph.trim())}</p>`)
+    .join('');
   document.querySelector('#project-detail').innerHTML = `
     <section class="project-intro${titleSizeClass}">
       <p class="eyebrow">${project.label}</p>
@@ -29,7 +44,7 @@ if (!project) {
       <div class="project-thumbnails" role="tablist" aria-label="Choose a project image">${project.images.map((image, index) => `<button class="project-thumb${index === 0 ? ' active' : ''}" type="button" data-index="${index}" role="tab" aria-selected="${index === 0}"><img src="../${image}" alt="View image ${index + 1}"></button>`).join('')}</div>
     </section>
     <section class="project-caption">
-      <p class="project-description">${project.description}</p>
+      ${descriptionParagraphs}
     </section>
     <a class="back-work" href="../index.html#work">← Back to selected work</a>`;
 
