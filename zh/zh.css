@@ -1,0 +1,17 @@
+html[lang="zh-Hans"] body{font-family:"Newsreader","Noto Serif SC","Songti SC",serif}.zh-intro{font-size:clamp(20px,2.1vw,28px);line-height:1.6}.zh-page h1,.zh-page h2,.zh-page h3{line-height:1.15}.learning-article{line-height:1.9}.learning-card h2{line-height:1.08}.faq-item summary{line-height:1.5}.site-nav .nav-link{white-space:nowrap}footer{gap:18px;flex-wrap:wrap}
+
+.zh-work .section-heading{align-items:end}.zh-work .section-heading h1{max-width:690px;margin:0;font-size:clamp(48px,6vw,88px);line-height:1.12}.zh-work .learning-dek{max-width:420px;margin:0;font-size:clamp(17px,1.8vw,22px)}.zh-work .work-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px 24px}.zh-work .project-image{aspect-ratio:1/.88}.zh-work .project-image img{width:100%;height:100%;object-fit:contain;padding:clamp(8px,1.4vw,18px)}@media(max-width:760px){.zh-work .section-heading{display:block}.zh-work .section-heading h1{font-size:clamp(42px,10vw,62px)}.zh-work .learning-dek{margin-top:22px}.zh-work .work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 14px}}@media(max-width:410px){.zh-work .work-grid{grid-template-columns:1fr}}
+
+.zh-work .section-heading{display:block;padding:24px 0 42px}.zh-work .section-heading h1{max-width:690px;margin:0;font-size:clamp(36px,4vw,60px);line-height:1.13}.zh-work .filters{margin-top:0}
+
+.zh-work #work-heading{font-family:"Songti SC","STSong","Noto Serif SC",serif;font-weight:500;font-style:normal;letter-spacing:-.025em;color:var(--ink)}.zh-work .work-heading-accent{color:var(--rust);font-weight:400}
+
+.manifesto .manifesto-quote{max-width:790px;margin:0;font-family:"Songti SC","STSong","Noto Serif SC",serif;font-weight:400;line-height:1.6;letter-spacing:0}.manifesto .manifesto-quote p{margin:0}.manifesto .text-link{font-family:inherit;line-height:1.6}
+
+/* Keep Chinese clauses together where they fit; balance longer clauses on small screens. */
+html[lang="zh-Hans"] p{line-break:strict;word-break:normal;overflow-wrap:normal;text-wrap:pretty}
+html[lang="zh-Hans"] h1,html[lang="zh-Hans"] h2,html[lang="zh-Hans"] h3{text-wrap:balance;line-break:strict}
+.manifesto .manifesto-quote{font-size:clamp(25px,3vw,42px)}
+.manifesto .manifesto-quote p{text-wrap:balance}
+.manifesto .quote-phrase{display:inline-block;max-width:100%;text-wrap:balance;vertical-align:top}
+@media(max-width:760px){.manifesto .manifesto-quote{font-size:clamp(23px,5.5vw,32px)}}
