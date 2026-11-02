@@ -60,12 +60,6 @@ const projects = [
     captions: ['A grounded workspace built for focused days.']
   },
   {
-    slug: 'bookshelf', title: 'Bookshelf', category: 'storage', label: 'Storage & display', materials: 'Solid wood',
-    images: ['images/projects/bookshelf/bookshelf-1.JPG', 'images/projects/bookshelf/bookshelf-2.JPG', 'images/projects/bookshelf/bookshelf-3.JPG'],
-    description: 'A bookshelf made to give books, records, and everyday objects a considered home. Open shelving keeps the composition light while making room for a life in progress.',
-    captions: ['A bookshelf for books, records, and found objects.', 'Open shelves keep the piece visually light.', 'Built storage that becomes part of the room.']
-  },
-  {
     slug: 'oakton-shoe-rack', title: '“Oakton” Shoe Rack', category: 'furniture', label: 'Furniture', materials: 'Hardwood with live edge & sapwood',
     images: ['images/projects/oakton-shoe-rack/oakton-shoerack-enh1.jpeg', 'images/projects/oakton-shoe-rack/oakton-shoerack-enh2.jpeg', 'images/projects/oakton-shoe-rack/oakton-shoerack-enh3.jpeg'],
     description: 'My first project after moving to Northern Virginia, made because a new home calls for useful furniture. Inspired by the work of @encurtis, it pairs dovetails on a curve with an intentional live edge and sapwood color variation.',
