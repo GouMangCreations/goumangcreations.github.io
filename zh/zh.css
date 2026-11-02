@@ -15,3 +15,9 @@ html[lang="zh-Hans"] h1,html[lang="zh-Hans"] h2,html[lang="zh-Hans"] h3{text-wra
 .manifesto .manifesto-quote p{text-wrap:balance}
 .manifesto .quote-phrase{display:inline-block;max-width:100%;text-wrap:balance;vertical-align:top}
 @media(max-width:760px){.manifesto .manifesto-quote{font-size:clamp(23px,5.5vw,32px)}}
+
+/* Work heading uses the same display type and responsive scale as the homepage hero. */
+.zh-work #work-heading{max-width:680px;font-family:Newsreader,serif;font-size:clamp(59px,8vw,118px);font-weight:500;line-height:.89;letter-spacing:-.06em}
+.zh-work .work-heading-accent{font-weight:500}
+/* Keep the language control available beside the dropdowns on narrow screens. */
+html[lang="zh-Hans"] .site-nav>.nav-link:last-child{display:inline!important}
