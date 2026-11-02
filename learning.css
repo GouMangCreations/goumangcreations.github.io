@@ -4,3 +4,19 @@
 @media(max-width:540px){.wood-diagram{margin-inline:-4vw}.wood-diagram figcaption{margin-inline:4vw}}
 
 .faq-page .learning-article{max-width:760px}.faq-group{margin:0 0 58px}.faq-group>.eyebrow{margin-bottom:16px;color:var(--rust-dark)}.faq-item{border-top:1px solid var(--line)}.faq-item:last-child{border-bottom:1px solid var(--line)}.faq-item summary{position:relative;cursor:pointer;list-style:none;padding:22px 38px 22px 0;font:500 clamp(22px,2.7vw,30px)/1.2 Newsreader,serif}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::after{content:"+";position:absolute;right:4px;top:19px;color:var(--rust);font:400 26px/1 "DM Mono",monospace}.faq-item[open] summary::after{content:"−"}.faq-item p{margin:0;padding:0 32px 24px 0}.faq-item a,.faq-page .learning-callout a{ text-decoration:underline;text-underline-offset:3px }
+
+/* Give every introduction card the same height, including across separate rows. */
+.learning-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;align-items:stretch}
+.learning-card{min-width:0;display:grid;grid-template-rows:auto 1fr auto;gap:24px}
+.learning-card>div{min-width:0;display:flex;flex-direction:column;align-items:stretch}
+.learning-card h2{margin:0;min-height:3.3em}
+.learning-card p{margin:16px 0 0;min-height:5.4em}
+.learning-card>span:last-child{align-self:end}
+@media(max-width:760px){.learning-grid{grid-template-columns:1fr}.learning-card h2{min-height:2.2em}.learning-card p{min-height:4.05em}}
+
+/* Scale card titles to their own available width rather than the viewport. */
+.learning-card{container-type:inline-size;padding:28px;gap:28px}
+.learning-card h2{font-size:clamp(28px,15cqi,42px);line-height:1.06;letter-spacing:-.035em;min-height:3.2em;max-width:100%;word-break:normal;overflow-wrap:normal;text-wrap:balance}
+.learning-card p{font-size:18px;line-height:1.45;min-height:5.8em}
+@media(min-width:761px) and (max-width:1000px){.learning-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.learning-card h2{min-height:2.2em}.learning-card p{min-height:4.35em}}
